@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> SPHINX-ULTIMATE </title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="js/bootstrap.min.js">
+  <link rel="stylesheet" type="text/css" href="js/jquery-3.3.1.min.js">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 	<link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+	<!-- <script src="https://cdnjs.cloudflare/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	 --> <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> 
+  <!--    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script> -->
+</head>
+    <style type="text/css">
+    	@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700')
+
+     html, body
+     {
+      height: 100%;
+      width: 100%;
+      font-family: 'Poppins', sans-serif;
+      color: #222;
+     }
+
+     .navbar
+     {
+      padding: 0.8rem;
+     }
+     /*1rem = 60px*/
+
+     .navbar-nav li{
+      padding-right: 20px;
+     }
+
+     .nav-link {
+      font-size: 1.1em !important;
+     }
+     
+     .carousel-inner img{
+      width: 100%;
+      height: 100%;
+     }
+     
+      .carousel-caption{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+      }
+
+      .carousel-caption h1{
+        font-size: 500%;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 15px #000;
+
+      }
+
+      .carousel-caption h3{
+        font-size: 200%;
+        font-weight: 500;
+        text-shadow: 1px 1px 1px 10px #000;
+        padding-bottom: 1rem;
+        color: #D2691E;
+      }
+
+      .btn-primary{
+        background-color: #6648b1;
+        border: 1px solid #6648b1;
+      }
+
+      .btn-primary:hover
+      {
+        background-color: #563d7c;
+        border: 1px solid #563d7c;
+      }
+
+      .jumbotron {
+        padding: 1rem;
+      }
+
+      .padding {
+        padding-bottom: 2rem;
+      }
+      .welcome {
+        width: 75%;
+        margin: 0 auto;
+        /*to center the text beneath the built with ease*/
+        padding-top: 2rem;
+      }
+
+      .welcome hr {
+        border: 2px solid #b4b4b4;
+        width: 95%;
+        /*95% so that it does not go out of the given text*/
+        margin-top: .3rem;
+        margin-bottom: 1rem;
+      }
+
+      .mybutton
+      {
+        color: #D2691E;
+        border-color: #D2691E;
+      }
+      
+      /*do change style of font awesomwe icons in 2 column section after 'Built with ease'*/
+
+      /*do see the fixed background image why it is not appearing just before meet the team*/
+      /*do check also the emoji section and navbar why toggle is not working properly*/
+      .social{
+        font-size: 4.5em;
+        padding: 60rem;
+      }
+
+       .fa-facebook
+       {
+        color: #3b5998;
+        padding: 2rem;
+       }
+
+       .fa-twitter
+       {
+        color: #08aced;
+        padding: 2rem;
+       }
+
+       .fa-instagram
+       {
+        color: #517fa4;
+        padding: 2rem;
+       }
+
+       .fa-google-plus
+       {
+        color: #dd4b39;
+        padding: 2rem;
+       }
+
+       .fa-youtube
+       {
+        color: #bb0000;
+        padding: 2rem;
+       }
+      
+       .fa-facebook:hover,
+       .fa-instagram:hover,
+       .fa-google-plus:hover,
+       .fa-twitter:hover,
+       .fa-youtube:hover {
+         color: #d5d5d5;
+       }
+       
+       footer
+       {
+         background-color: #3f3f3f;
+         color: #d5d5d5;
+         padding-top: 2rem;
+       }
+      
+       hr.light
+       {
+        border-top: 1px solid #d5d5d5;
+        width: 75%;
+        margin-top: .8rem;
+        margin-bottom: 1rem;
+       }
+
+       footer a{
+        color: #d5d5d5;
+       }
+
+       hr.light-100
+       {
+        border-top: 1px solid #d5d5d5;
+        width: 100%
+        margin-top: .8rem;
+        margin-bottom: 1rem;
+       }
+
+
+
+     /*Media Queries*/
+     @media (max-width: 992px) {
+      .social a
+      {
+        font-size: 2em;
+        padding: 1rem;
+      }
+     }
+     @media (max-width: 768px) {
+      .carousel-caption {
+       top: 45%;
+      }
+      .carousel-caption h1 {
+        font-size: 350%;
+
+      }
+
+      .carousel-caption h3 {
+        font-size: 140%;
+        font-weight: 400;
+        padding-bottom: .2rem;
+      }
+
+      .carousel-caption .btn
+      {
+        font-size: 95%;
+        padding: 8px 14px;
+      }
+      .display-4
+      {
+        font-size: 200%;
+      }
+      .social a{
+        font-size: 0.5em;
+        padding: 0.2rem;
+      }
+      .carousel-indicators
+      {
+        display: none;
+      }
+     }
+     @media (max-width: 576px) {
+
+      .carousel-caption {
+       top: 40%;
+      }
+      .carousel-caption h1 {
+        font-size: 250%;
+
+      }
+
+      .carousel-caption h3 {
+        font-size: 110%;
+      }
+
+      .carousel-caption .btn
+      {
+        font-size: 90%;
+        padding: 4px 8px;
+      }
+      .carousel-indicators
+      {
+        display: none;
+      }
+      .display-4
+      {
+        font-size: 160%;
+      }
+      
+
+     }
+
+     /*Firefox Bug Fix*/
+     .carousel-item {
+      transition: -webkit-transform 0.5s ease;
+      transition: transform 0.5s ease;
+      transition: transform 0.5s ease;
+      -webkit-backface-visibility: visible;
+      backface-visibility: visible;
+
+
+     }
+     /*fixed background image*/
+
+     figure {
+       position: relative;
+       width: 100%;
+       height: 60%;
+       margin: 0!important;
+     }
+
+     .fixed-wrap {
+      clip: rect(0, auto, auto , 0);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%
+     }
+     
+     #fixed{
+      background-image: url(Desert.jpg);
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center center;
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      will-change : transform;
+     }
+     /*bootstrap padding fix*/
+
+     [class*="col-"]
+     {
+      padding: 1rem;
+     }
+
+    .navbar
+    {
+      background: #c9c1ac;
+      padding:  20px 20px;
+      transition: all 1s ease
+    }
+
+    .navbar-background
+    {
+      padding: 5px 20px;
+
+    }
+    .nav-link
+    {
+      color: #242424;
+      text-decoration: none;
+      transition: all 0.5s ease;
+      font-size: 23px;
+    }
+    .nav-link:hover
+    {
+      color: #d3325f;
+    }
+    .nav-btn
+    {
+       background:transparent;
+       color: #d3325f;
+       border: 2px solid #d3325f;
+       transition: all 2s ease;
+       font-size: 23px;
+    }
+    .nav-btn:hover
+    {
+       color: #242424;
+       border: 2px solid #242424;
+       transform: rotate(10deg);
+    }
+
+
+    .toggler-btn
+    {
+      border: 2px solid #d3325f;
+      padding: 5px;
+      transition: all 2s ease;
+    }
+
+    .bar
+    {
+      width: 30px;
+      height: 3px;
+      margin: 5px;
+      background: #d3325f ;
+      transition: all 0.5s ease;
+    }
+
+    .change .bar1
+    {
+      transform: rotate(-45deg) translate(-5px,6px);
+    }
+     .change .bar2
+    {
+      opacity: 0;
+    }
+     .change .bar3
+    {
+      transform: rotate(45deg) translate(-5px,-8px);
+    }
+
+
+
+
+
+
+
+
+    </style>
+     <script type="text/javascript">
+       $(document).ready(function() {
+        
+     
+
+  $('.navbar-toggler').click(function(){
+    
+    $('.navbar-toggler').toggleClass('change');
+
+
+
+  });
+
+  //sticky navbar and less padding
+   $(window).scroll(function(){
+     let pos = $(this).scrollTop();
+     if(pos>=718)
+     {
+      $('.navbar').addClass('navbar-background');
+      $('.navbar').addClass('fixed-top');
+     }
+     else
+     {
+      $('.navbar').removeClass('navbar-background');
+      $('.navbar').removeClass('fixed-top');
+     }
+
+    
+
+   })
+
+   $('nav-item a').click(function(link){
+
+    link.preventDefault();
+    let target = $(this).attr('href');
+
+    $('html,body').animate(function(){
+       scrollTop:$(target).offset().top -25
+
+    },3000)
+
+
+   });
+
+     </script>
+
+<body>
+  <!-- log in page remember to connect-->
+
+   <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg new_nav sticky-top">
+    <a href="index.html" class="navbar-brand text-uppercase primary-color"><img src="https://as2.ftcdn.net/jpg/00/84/42/33/500_F_84423330_BRWwpSaPzhhCCUzIUW09Qkm5qPHZQKOS.jpg" height="60px" width="60px"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+      <div class="toggler-btn">
+        <div class="bar bar1"></div>
+        <div class="bar bar2"></div>
+        <div class="bar bar3"></div>
+
+
+
+      </div>
+
+
+   <!-- <span class="navbar-toggler-icon"></span> -->
+    </button>
+    <!--links-->
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a href="#" class="nav-link text-capitalize">HOME</a> 
+        </li>
+         <li class="nav-item">
+            <a href="#" class="nav-link text-capitalize">ABOUT</a> 
+        </li>
+         <li class="nav-item">
+            <a href="#" class="nav-link text-capitalize">SERVICES</a> 
+        </li>
+         <li class="nav-item">
+            <a href="#" class="nav-link text-capitalize">TEAM</a> 
+        </li>
+         <li class="nav-item">
+            <a href="#" class="nav-link text-capitalize">CONNECT</a> 
+        </li>
+      </ul>
+    </div>
+     
+
+
+  </nav>
+
+   
+   <!--  -->
+   <!-- Image Slide Bar -->
+   <div id="slides" class="carousel slide" data-ride="carousel">
+     <!-- we are going to add our carousel indicators which are the links at the bottom of our image sliders that bring us to different slides -->
+     <ul class="carousel-indicators">
+       <li data-target="#slides active"></li>
+       <li data-target="#slides"></li>
+
+
+
+     </ul>
+     <!-- we r not going to see our popup's yet untill we are going to add our images -->
+     <div class="carousel-inner">
+          <div class="carousel-item active">
+         <!-- noew we r going to add images -->
+            <img src="images/gaurav.JPG">
+            <div class="carousel-caption">
+            <h1 class="display-2">SPHINX-ULTIMATE</h1>
+            <h3> COMPLETE LOGICAL GUIDE </h3>
+            <a href="http://localhost/mail/login.php"><button type="button" class="btn btn-outline-light btn-lg mybutton">SIGN IN</button></a>
+            <a href="http://localhost/mail/signup2.php"><button type="button" class="btn btn-primary btn-lg">GET STARTED</button></a>
+           </div>
+          </div>
+       <!-- bootstrap has display classes which make text large and light weight display-1,display-2,display-3,display-4 -->
+          <div class="carousel-item">
+            <img src="images/Desert.jpg">
+          </div>
+     </div>
+   </div>
+   <!-- <div id="slider" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active"> -->
+
+   <!-- Jumbotron -->
+    <div class="container-fluid">
+      <div class="row jumbotron">
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+          <p class="lead">Get more engagement, leads, revenue & insights with interactive content</p>
+          <!-- lead class makes text sort of light weight -->
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2">
+          <a href="#"><button type="button" class="btn btn-outline-secondary btn-lg">Learn More</button></a>
+        </div>
+        <!-- 9 col for para and 3 col for our button -->
+        <!-- we only need to reference the bootstrap column width where it goes from at extra small width we will take up 100% of width as we have 12 columns for medium amd large screens it will consume upto 9 col-->
+      </div>
+    </div>
+
+   <!-- Welcome Section -->
+   <div class="container-fluid padding">
+     <div class="row welcome text-center">
+       <!-- we apply some additional padding between containers and columns , welcome is a class that will style to give this section its width along with some other things-->
+       <div class="col-12">
+         <h1 class="display-4">Unlocking knowledge at the speed of thought</h1>
+         <hr>
+         <div class="col-12">
+           <p class="lead">Welcome to SPHINX_ULTIMATE, the ultimate Quizzing Colesium. Where a smart answer won't get you fired!</p>
+         </div>
+         <!-- it takes 100% of the screen and all 12 columns -->
+       </div>
+     </div>
+   </div>
+
+   <!-- 3 column section -->
+   <div class="container-fluid padding">
+     <div class="row text-center padding">
+       <div class="col-xs-12 col-sm-6 col-md-4 ">
+         <img src="https://www.opinionstage.com/wp/wp-content/uploads/2019/01/fantastic-engagement-interactive-content.svg" height="200px" width="200px">
+         <h3>FANTASTIC ENGAGEMENT</h3>
+         <p>Interactive Content is the most engaging type of content on the internet. Increase time on site, social sharing and traffic to your site.</p>
+       </div>
+       <div class="col-xs-12 col-sm-6 col-md-4 ">
+         <img src="https://www.opinionstage.com/wp/wp-content/uploads/2018/12/qualified-leads-based-on-interactive-content.svg" height="200px" width="200px">
+         <h3>QUALIFIED LEADS</h3>
+         <p>Generate leads by integrating lead forms inside interactive content. Generate up to 500% more leads, and qualify them in the process</p>
+       </div>
+       <div class="col-sm-12 col-md-4">
+         <img src="https://www.opinionstage.com/wp/wp-content/uploads/2019/01/deep-insights-from-interactive-content.svg" height="200px" width="200px">
+         <h3>DEEP INSIGHTS</h3>
+         <p>Discover insights while users engage with appealing polls, surveys & quizzes. Get more responses. Analyze results with powerful analytics dashboard</p>
+       </div>
+     </div>
+     <hr class="my-4">
+   </div>
+
+   <!-- 2 column section -->
+   <div class="container-fluid padding">
+     <div class="row padding">
+       <div class=" col-lg-6">
+         <h2>If you built it...</h2>
+         <p>The columns will automatically stack on top of each other when the screen is less than 576px</p>
+         <p>Resize the browser window to see the effect. Responsive web design has become more important as the amount of mobile traffic now accounts for more than half of the total internet traffic.</p>
+         <p>It can also display the web page differently depending on the screen size or viewing device</p>
+         <br>
+         <a href="#" class="btn btn-primary">Learn More</a>
+       </div>
+       <!-- ye niche vali image bhi full screen pe 6 col legi yani full screen pe upar vale text k sath aayegi else uske niche -->
+       <div class="col-lg-6">
+         <img src="https://images.pexels.com/photos/53209/newspaper-news-media-spectacles-53209.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500 1x, https://images.pexels.com/photos/53209/newspaper-news-media-spectacles-53209.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500 2x" class="img-fluid" width="512px" height="300px">
+       </div>
+       <!-- text is on left and image is on right on full screen which changes on 992px mark -->
+       <!-- BAD VALA NUMBER BTA RHA HAI KITNE HISSO ME BATEGA AS THERE ARE TOTAL 12 COLUMNS -->
+       <!-- jaise ye upar vala text full screen pe 6 col lega baki usse niche hui to puri screen cover karega -->
+     </div>
+   </div>
+   <hr class="my-4">
+   <!-- my-4 spans the whole page and gives the  greyish feeling -->
+   <!-- fixed background -->
+   <figure>
+     <div class="fixed-wrap">
+       <div id="fixed">
+         
+       </div>
+     </div>
+   </figure>
+
+   <!-- Emoji Section -->
+<!--    <button class="fun" data-toggle="collapse" data-target="#emoji">Click For fun</button>
+   <div id="emoji" class="collapse">
+     <div class="container-fluid padding">
+       <div class="row text-center">
+         they go from 12 to 6 to 3
+         <div class="col-sm-6 col-md-3">
+           <img src="holi.webp" class="gif">
+            gif is given so that we can give it max width later in css -->
+        <!--  </div>
+       </div>
+     </div>
+   </div> -->
+    <!-- add this emoji four times -->
+   <!-- Meet the team -->
+   <div class="container-fluid padding">
+    <div class="row welcome text-center">
+      <div class="col-12">
+        <h1 class="display-4">Meet The Team</h1>
+        
+      </div>
+    </div>
+     
+   </div>
+
+
+   <!-- cards -->
+   <div class="container-fluid padding">
+    <div class="row padding">
+      <!-- next we have cards where we go from 3 to 1 -->
+      <div class="col-md-4">
+        <div class="card">
+          <!-- card-img-top since the image is at the top rather than at the middle -->
+           <img src="images/p1.jpg" class="card-img-top">  
+           <!-- underneath we have our card-body -->
+           <div class="card-body">
+             <h4 class="card-title">John Doe</h4>
+             <p class="card-text">John is an internet enterpreneur with almost 20 years of experience.</p>
+             <!-- now we have our button -->
+             <a href="#" class="btn btn-outline-secondary">See Profile</a>
+           </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <!-- card-img-top since the image is at the top rather than at the middle -->
+           <img src="images/p3.jpg" class="card-img-top">  
+           <!-- underneath we have our card-body -->
+           <div class="card-body">
+             <h4 class="card-title">Mary Jo</h4>
+             <p class="card-text">Mary Jo is a designer with almost 10 years of digital design experience</p>
+             <!-- now we have our button -->
+             <a href="#" class="btn btn-outline-secondary">See Profile</a>
+           </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <!-- card-img-top since the image is at the top rather than at the middle -->
+           <img src="images/p2.jpg" class="card-img-top">  
+           <!-- underneath we have our card-body -->
+           <div class="card-body">
+             <h4 class="card-title">Phil Ho</h4>
+             <p class="card-text">Phil Ho is a developer with over 6 years of web development experience</p>
+             <!-- now we have our button -->
+             <a href="#" class="btn btn-outline-secondary">See Profile</a>
+           </div>
+        </div>
+      </div>
+
+    </div>
+   </div>
+
+    <!-- 2 column section -->
+    <div class="container-fluid padding">
+     <div class="row padding">
+       <div class=" col-lg-6">
+         <h2>Our Philosophy</h2>
+         <p>We know that greatness is a disruptive era requires bold ambition, curious talent and a culture that believes that we are smarter together</p>
+         <p>We approach every challage holistically, with best in class expertise in data , creativity, media , search , technology, social and more. We call this Alchemy. It has the power to build our cleint's brands and transform their business. And while it may seem like magic, we have got it down to a science.</p><br>
+      </div>
+       <!-- ye niche vali image bhi full screen pe 6 col legi yani full screen pe upar vale text k sath aayegi else uske niche -->
+       <div class="col-lg-6">
+         <img src="https://as1.ftcdn.net/jpg/01/06/88/98/500_F_106889825_cNdoM1PCjZQremVA5QfjuozA7gcv85sb.jpg" class="img-fluid" width="512px" height="300px">
+       </div>
+       <!-- text is on left and image is on right on full screen which changes on 992px mark -->
+       <!-- BAD VALA NUMBER BTA RHA HAI KITNE HISSO ME BATEGA AS THERE ARE TOTAL 12 COLUMNS -->
+       <!-- jaise ye upar vala text full screen pe 6 col lega baki usse niche hui to puri screen cover karega -->
+     </div>
+     <hr class="my-4">
+   </div>
+
+    <!-- connect -->
+    <div class="container-fluid padding">
+      <div class="row padding text-center">
+        <div class="col-12"><h2>Connect</h2></div>
+        <!-- for our social links -->
+        <div class="col-12  social padding">
+          <a href="#"><i class="fa fa-facebook" style="font-size: 50px;"></i></a>
+          <a href="#"><i class="fa fa-instagram" style="font-size: 50px;"></i></a>
+          <a href="#"><i class="fa fa-twitter" style="font-size: 50px;"></i></a>
+          <a href="#"><i class="fa fa-google-plus" style="font-size: 50px;"></i></a>
+          <a href="#"><i class="fa fa-youtube" style="font-size: 50px;"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div class="container-fluid padding">
+        <div class="row text-center">
+          <div class="col-md-4">
+            <img src="https://as2.ftcdn.net/jpg/00/84/42/33/500_F_84423330_BRWwpSaPzhhCCUzIUW09Qkm5qPHZQKOS.jpg" height="50px" width="50px">
+            <hr class="light">
+            <p>555-555-5555</p>
+            <p>email@myemail.com</p>
+            <p>100 STREET NAME</p>
+            <p>City State 10000</p>
+          </div>
+          <div class="col-md-4">
+            <hr class="light">
+            <h5>Services Area</h5>
+            <hr class="light">
+            <p>Monday: 9am - 5pm</p>
+            <p>Saturday: 10am - 4pm</p>
+            <p>Sunday: Closed</p>
+          </div>
+          <div class="col-md-4">
+            <hr class="light">
+            <h5>Our Hours</h5>
+            <hr class="light">
+            <p>City State 10000</p>
+            <p>City State 10000</p>
+            <p>City State 10000</p>
+            <p>City State 10000</p>
+          </div>
+          <div class="col-12">
+            <hr class="light-100">
+            <h5>&copy; SPHINX_ULTIMATE.com</h5>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+</body>
+</html>
